@@ -1,0 +1,43 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Problem1 {
+public static void main(String[] args) {
+String file = "/home/seshagiri/zemoso/JAVA problem1/triangle.txt";
+int j,k,sum_1,sum_2,sum;
+try {
+	FileReader fr = new FileReader(file);
+	Scanner sc = new Scanner(fr);
+	ArrayList<Integer> triarray = new ArrayList<Integer>();
+	
+	while(sc.hasNextInt()){
+		triarray.add(sc.nextInt());
+	}
+	int y=triarray.size();
+	int[] x = new int[y];
+	for(int i=0;i<y;i++){
+	x[i] =triarray.get(i);
+	}
+	for(int a=100;a>1;a--){
+		j=a*(a-1)/2;
+		k=((a-1)*(a-2)/2);
+		for(int b=1;b<a;b++){
+			sum_1=x[j+b-1]+x[k+b-1];
+			sum_2=x[j+b]+x[k+b-1];
+			sum=Math.max(sum_1, sum_2);
+			x[k+b-1]=sum;
+		}			
+		}
+	System.out.println(x[0]);
+	
+	//System.out.println(triarray);
+	sc.close();
+} catch (FileNotFoundException e) {
+	// TODO Auto-generated catch block
+	System.out.println("File not found");
+}
+
+}
+}
