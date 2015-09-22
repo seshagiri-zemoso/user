@@ -18,7 +18,7 @@ static String D_temp7="";
 static String D_temp8="";
 
 static String SettingUp(){
-for(int i=1; i<6;i++){
+for(int i=1; i<5;i++){
 int len = D_temp3.length();
 int leng = D_temp2.length();
 int length = (len-leng);
