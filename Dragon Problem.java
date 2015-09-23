@@ -9,8 +9,8 @@ public class drogo {
 //static String h = "LLFaRbFR";
 static String D_temp="";
 static String D_temp1="";
-static String D_temp2="aefgfehg";
-static String D_temp3="aefgfehgfefghehg";
+static String D_temp2="aefgfehg"; //its fourth series
+static String D_temp3="aefgfehgfefghehg; //its 5th series
 static String D_temp4="";
 static String D_temp5="";
 static String D_temp6="";
