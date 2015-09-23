@@ -35,21 +35,14 @@ public static void main(String[] args) {
 				Larrys.put(i, r);
 			}
 			else{
-				Integer a=Larrys.lastKey();
+				Integer a=Larrys.firstKey();
 				Larrys.remove(a);
 				Larrys.put(i, r);
 			}					
 		}		
 		 if(Robbin.containsValue(r)){
 			 count_2++;
-			 for(Object O:Robbin.keySet()){
-				if(Robbin.get(O)==r){
-					Robbin.remove(O);
-				    break;
-				}
-			 }
-			 
-			 Robbin.put(i, r);
+			
 		 }
 		 else{
 				if(Robbin.size()<5){
